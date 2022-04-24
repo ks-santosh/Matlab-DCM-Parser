@@ -1,7 +1,27 @@
 # Matlab-DCM-Parser
-The DcmParser m-script reads the DCM file and convert its data into a containers.Map object. This object retains DCM metadata, comments, and data order for reproducing DCM file from the object. Ensure the DCM file conforms to the specifications outlined in [DCM_File_Formats](https://www.etas.com/download-center-files/products_ASCET_Software_Products/TechNote_DCM_File_Formats.pdf "DCM File Formats").
+The DcmParser m-script reads the DCM file and convert its data into a containers.Map object. This object retains DCM metadata, comments, and data order for reproducing DCM file from the object using MapToDcm m-script. Ensure the DCM file conforms to the specifications outlined in [DCM_File_Formats](https://www.etas.com/download-center-files/products_ASCET_Software_Products/TechNote_DCM_File_Formats.pdf "DCM File Formats").
 
 ## Demo
+Parsing DCM [TestDCM.dcm](/DcmParser/TestDCM.dcm)
+
+```matlab
+>> DcmVarMap = DcmParser('TestDCM.dcm');
+START
+-> Reading TestDCM.dcm ...
+-> Successfully parsed DCM!
+-> Number of variables read: 7
+END 
+```
+
+Creating DCM file from containers.Map object
+
+```matlab
+>> MapToDcm(DcmVarMap)
+START
+-> Creating DCM MapToDcm.DCM ...
+-> Successfully created MapToDcm.DCM!
+END 
+```
 The log shows the ouput after parsing [TestDCM.dcm](/DcmParser/TestDCM.dcm)
 
 ```matlab
