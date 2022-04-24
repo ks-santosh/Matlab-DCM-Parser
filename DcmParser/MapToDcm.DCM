@@ -1,0 +1,76 @@
+* DAMOS format
+* Created by ASCET
+* Creation date: 21.11.2012 17:06:25
+*
+* DamosDataFilePath: 'c:\ETASData\ASCET6.1\Test_DCM2.dcm'
+* DamosExtensionForOutput: 'dcm'
+* DamosFormatVersion: '2'
+* DamosCaseSensitiveNames: true
+* DamosIncludeBooleans: true
+* DamosIncludeDependentParameter: true
+* DamosBooleanFormat: 'String'
+* DamosEnumerationFormat: 'String'
+* DamosShowInputLogFile: true
+* DamosInputLogFile: 'c:\ETAS\LogFiles\ASCET\filein.log'
+* DamosShowOutputLogFile: false
+* DamosOutputLogFile: 'c:\ETAS\LogFiles\ASCET\fileout.log'
+
+KONSERVIERUNG_FORMAT 2.0
+
+
+FESTWERTEBLOCK array 4
+   LANGNAME "sample temperatures"
+   EINHEIT_W "° C"
+   WERT   0.75   -0.25   0.5   1.5   
+END
+
+FESTWERT cont 
+   LANGNAME "speed"
+   EINHEIT_W "m / s"
+   WERT 3.1415
+END
+
+STUETZSTELLENVERTEILUNG distrib 3
+*SST
+   LANGNAME "object length"
+   EINHEIT_X ""
+   ST/X   1.0   2.0   3.0   
+END
+
+GRUPPENKENNLINIE One_D_group 3
+   LANGNAME ""
+   EINHEIT_X ""
+   EINHEIT_W ""
+*SSTX	distrib\Module_Block_Diagram
+   ST/X   1.0   2.0   3.0   
+   WERT   -10.0   1.0   5.937   
+END
+
+FESTWERT sdisc 
+   LANGNAME ""
+   EINHEIT_W ""
+   WERT -98
+END
+
+GRUPPENKENNFELD Two_D_group 3 3
+   LANGNAME "engine calibration"
+   EINHEIT_X "A"
+   EINHEIT_Y "m/s"
+   EINHEIT_W "Nm"
+*SSTX	distrib\Module_Block_Diagram
+*SSTY	distrib\Module_Block_Diagram
+   ST/X   1.0   2.0   3.0   
+   ST/Y   1.0
+   WERT   1.0   2.0   3.0   
+   ST/Y   2.0
+   WERT   2.0   4.0   6.0   
+   ST/Y   3.0
+   WERT   3.0   6.0   9.0   
+END
+
+FESTWERT udisc_1 
+   LANGNAME ""
+   EINHEIT_W ""
+   WERT 876
+END
+
