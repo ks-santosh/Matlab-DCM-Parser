@@ -1,0 +1,9 @@
+KONSERVIERUNG_FORMAT 2.0
+
+FESTWERT sdisc 
+   LANGNAME ""
+   FUNKTION BrakeFunc 
+   EINHEIT_W ""
+   WERT -98
+END
+

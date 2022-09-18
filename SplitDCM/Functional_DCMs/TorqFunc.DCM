@@ -1,0 +1,17 @@
+KONSERVIERUNG_FORMAT 2.0
+
+FESTWERT cont 
+   LANGNAME "speed"
+   FUNKTION TorqFunc 
+   EINHEIT_W "m / s"
+   WERT 3.1415
+END
+
+STUETZSTELLENVERTEILUNG distrib 3
+*SST
+   LANGNAME "object length"
+   FUNKTION TorqFunc 
+   EINHEIT_X ""
+   ST/X   1.0   2.0   3.0   
+END
+
