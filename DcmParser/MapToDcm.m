@@ -12,12 +12,12 @@ function MapToDcm(DcmVarMap,DcmPath,DcmName)
      
     if(nargin == 3)
         DcmFilePath = strcat(DcmPath,'\',DcmName);
-    end
-    
-    % Default DCM file name
-    DcmFilePath = 'MapToDcm.DCM';
-    DcmName = 'MapToDcm.DCM';
-    
+    else
+		% Default DCM file name
+		DcmFilePath = 'MapToDcm.DCM';
+		DcmName = 'MapToDcm.DCM';
+	end
+	
     DcmVar = DcmVarMap('Order');
     
     fprintf('START\n-> Creating DCM %s ...\n', DcmName);
